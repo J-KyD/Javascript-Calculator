@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" >
+    <link rel="stylesheet" type="text/css" href="css/calculator.css">
+    <script src="https://kit.fontawesome.com/8c2a77cc0b.js" crossorigin="anonymous"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.6.1.js"
+  integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+  crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 nopadding">
+            <input type="text" name="calculation" id="calculation" class="form-control" >
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3 nopadding">
+                <button class="btn btn-block btn_font" style="background-color: #9f9f9f; "  onclick="ClearData()">AC</button>
+            </div>
+            <div class="col-xs-3 nopadding">
+                <button class="btn btn-block btn_font" style="background-color: #9f9f9f; "  onclick="ClearData()">+/-</button>
+            </div>
+            <div class="col-xs-3 nopadding">
+                <button class="btn btn-block btn_font" style="background-color: #9f9f9f; "  onclick="ClearData()">%</button>
+            </div>
+            <div class="col-xs-3 nopadding">
+                <button id="divide" class="btn btn-block btn_font" style="background-color: #f69906; color:white;" onclick='UserClickButton("/")'>  <i class='fas fa-divide' style="font-size: 20px;"></i></button>
+            </div>
+        </div>
+         <div class="col-lg-12" id="history_log" style="display: none;">
+
+            </div>
+    <div class="row">
+         <div class="col-xs-3 nopadding">
+                <button id="seven" class="btn btn-block btn_font" style="background-color: #313131; color: white;" onclick='UserClickButton("7")'>7</button>
+            </div>
+            <div class="col-xs-3 nopadding">
+                <button id="eight" class="btn btn-block btn_font" style="background-color: #313131; color: white;" onclick='UserClickButton("8")'>8</button>
+            </div>
+            <div class="col-xs-3 nopadding">
+                <button id="nine" class="btn btn-block btn_font" style="background-color: #313131; color: white;" onclick='UserClickButton("9")'>9</button>
+            </div>
+        <div class="col-xs-3 nopadding">
+            <button id="multiply" class="btn btn-block btn_font" style="background-color: #f69906; color:white;" onclick='UserClickButton("*")'>x</button>
+        </div>
+       
+    </div>
+        <div class="row">
+            <div class="col-xs-3 nopadding">
+                <button id="four" class="btn btn-block btn_font" style="background-color: #313131; color: white;" onclick='UserClickButton("4")'>4</button>
+            </div>
+            <div class="col-xs-3 nopadding">
+                <button id="five" class="btn btn-block btn_font" style="background-color: #313131; color: white;" onclick='UserClickButton("5")'>5</button>
+            </div>
+            <div class="col-xs-3 nopadding">
+                <button id="six" class="btn btn-block btn_font" style="background-color: #313131; color: white;" onclick='UserClickButton("6")'>6</button>
+            </div>
+            <div class="col-xs-3 nopadding">
+                <button id="minus" class="btn btn-block btn_font" style="background-color: #f69906; color:white;" onclick='UserClickButton("-")'>-</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3 nopadding">
+                <button id="one" class="btn btn-block btn_font" style="background-color: #313131; color: white;" onclick="UserClickButton('1')">1</button>
+            </div>
+            <div class="col-xs-3 nopadding">
+                <button id="two" class="btn btn-block btn_font" style="background-color: #313131; color: white;" onclick="UserClickButton('2')">2</button>
+            </div>
+            <div class="col-xs-3 nopadding">
+                <button id="three" class="btn btn-block btn_font" style="background-color: #313131; color: white;" onclick="UserClickButton('3')">3</button>
+            </div>
+          
+            <div class="col-xs-3 nopadding">
+                <button id="add" class="btn btn-block btn_font" style="background-color: #f69906; color:white;" onclick='UserClickButton("+")'>+</button>
+            </div>
+           
+        </div>
+        <div class="row">
+            <div class="col-xs-6 nopadding">
+                <button id="zero" class="btn btn-block btn_font" style="background-color: #313131; color: white;" onclick='UserClickButton("0")'>0</button>
+            </div>
+            <div class="col-xs-3 nopadding">
+                <button id="dot" class="btn btn-block btn_font" style="background-color: #313131; color: white;" onclick='UserClickButton(".")'>.</button>
+            </div>
+             <div class="col-xs-3 nopadding">
+                <button id="equal" class="btn btn-block btn_font" style="background-color: #f69906; color: white;" onclick='CalculateValue()'>=</button>
+            </div>
+        
+        </div>
+      
+       
+    </div>
+
+<script src="js/calculator.js"></script>
+</body>
+</html>
